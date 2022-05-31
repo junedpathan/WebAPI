@@ -34,6 +34,7 @@ namespace WebApi
             });
 
             services.AddScoped<IDataService<Customer,int>, CustomersDataServices> ();
+            services.AddScoped<IDataService<Order, int>, OrdersDataServices>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
